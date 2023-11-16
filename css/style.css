@@ -1,0 +1,90 @@
+* { margin: 0; padding: 0; } 
+body {background-color: #21242B;}
+.container{ width: 1920px; margin: 0 ;
+height: 1080px; background: #21242B;
+position: relative; } 
+
+.text{
+  width: 364.33px;
+  height: 133.259px;
+ 
+
+  color: #e0e0e0;
+
+  font-family: Plaster;
+  font-size: 35.18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 31.662px */
+  letter-spacing: -2.111px;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+
+z-index: 4;
+
+animation: drawCircle 3s ease-in-out infinite; /* 3초 동안 ease-in-out 속도로 애니메이션 적용, 무한 반복 */}
+
+.circle1 {
+ width: 100px;
+ height: 100px;
+ /* background-color: red; */
+ position: absolute;
+ left: 500px;
+ top: 60px;
+}
+.circle2 {
+  width: 100px;
+  height: 100px;
+  /* background-color: blue; */
+  position: absolute;
+  left: 70px;
+  bottom: 80px;
+
+}
+.circle3 {
+  width: 100px;
+  height: 100px;
+  /* background-color: green; */
+  position: absolute;
+  right: 40px;
+  top: 500px;
+}
+.bubble {
+ 
+  position: absolute;
+  top: 0; left: 0; z-index:1;
+
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+@keyframes drawCircle {
+
+  0% {
+
+    transform: scale(0); /* 0%에서는 원의 크기를 0으로 설정하여 숨김 */
+
+    opacity: 0; /* 투명도를 0으로 설정하여 숨김 */
+
+  }
+
+  50% {
+
+    transform: scale(1.5); /* 50%에서는 원의 크기를 1.5배로 키움 */
+
+    opacity: 1; /* 투명도를 1로 설정하여 나타남 */
+
+  }
+
+  100% {
+
+    transform: scale(1); /* 100%에서는 원의 크기를 원래 크기로 돌림 */
+
+    opacity: 0; /* 투명도를 0으로 설정하여 숨김 */
+
+  }
+
+}
